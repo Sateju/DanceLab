@@ -1,0 +1,12 @@
+ext {
+    // Android libraries
+    app_compat_version = '1.1.0-alpha01'
+    core_version = '1.1.0-alpha03'
+
+    // Unit Testing
+    junit_version = '4.12'
+
+    // Instrumentation Testing
+    runner_version = '1.1.0-alpha4'
+    espresso_core_version = '3.1.0-alpha4'
+}
