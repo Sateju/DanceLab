@@ -2,6 +2,7 @@ ext {
     // Android libraries
     app_compat_version = '1.1.0-alpha01'
     core_version = '1.1.0-alpha04'
+    constraint_layout_version = '2.0.0-alpha3'
 
     // Koin
     koin_core_version = '1.0.2'

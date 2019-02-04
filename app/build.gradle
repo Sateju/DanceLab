@@ -29,9 +29,11 @@ dependencies {
     // Android libraries
     implementation "androidx.appcompat:appcompat:$app_compat_version"
     implementation "androidx.core:core-ktx:$core_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
 
     // Koin
     implementation "org.koin:koin-core:$koin_core_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_core_version"
 
     // Testing
     testImplementation "junit:junit:$junit_version"
