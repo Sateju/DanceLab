@@ -4,6 +4,6 @@ interface EventsRepository {
     fun getEventTitle(): String
 }
 
-class EventsRepositoryImpl() : EventsRepository {
+class EventsRepositoryImpl : EventsRepository {
     override fun getEventTitle() = "Cápsula Bachata Disociación Corporal (Dámaris Cerro)"
 }
