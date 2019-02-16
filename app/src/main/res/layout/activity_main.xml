@@ -38,8 +38,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_height="?attr/actionBarSize"
-                app:itemIconTint="@color/primaryColor"
+                app:itemIconTint="@drawable/selector_bottom_navigation_item_colors"
                 app:itemTextColor="@color/primaryColor"
-                app:menu="@menu/main_bottom_navigation_menu"/>
+                app:menu="@menu/main_bottom_navigation_menu"
+                app:itemBackground="@drawable/view_divider"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
