@@ -17,7 +17,7 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.AppTheme)
-        val binding: ActivityEventsBinding = DataBindingUtil.setContentView(this, R.layout.activity_events)
+        val binding: ActivityEventsBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         Log.d("MainActivity", eventsViewModel.getEventTitleViewModel())
     }
 }
