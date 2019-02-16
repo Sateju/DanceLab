@@ -3,10 +3,13 @@ package jjtelechea.dancelab.domain.usecases
 import jjtelechea.dancelab.domain.entities.EventEntity
 import jjtelechea.dancelab.domain.repository.EventsRepository
 
+interface EventsUseCase {
+    fun execute(): EventEntity
+}
 
-class EventsUseCase(private val eventsRepository: EventsRepository) {
+class EventsUseCaseImpl(private val eventsRepository: EventsRepository) : EventsUseCase {
 
-    fun execute(): EventEntity {
+    override fun execute(): EventEntity {
         return EventEntity(eventsRepository.getEventTitle(), eventsRepository.getEventTitle())
     }
 }
