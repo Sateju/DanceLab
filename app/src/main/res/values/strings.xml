@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DanceLab</string>
+
+    <!-- BottomNavigationBar Text Icon -->
+    <string name="bottom_navigation_bar_events">Eventos</string>
+    <string name="bottom_navigation_bar_schedule">Horarios</string>
+    <string name="bottom_navigation_bar_capsules">Cápsulas</string>
+    <string name="bottom_navigation_bar_more">Más</string>
 </resources>
