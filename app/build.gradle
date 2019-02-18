@@ -42,6 +42,10 @@ dependencies {
     implementation "org.koin:koin-core:$koin_core_version"
     implementation "org.koin:koin-android-viewmodel:$koin_core_version"
 
+    // Leak Canary
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leak_canary_version"
+
     // Testing
     testImplementation "junit:junit:$junit_version"
     testImplementation "org.koin:koin-test:$koin_core_version"

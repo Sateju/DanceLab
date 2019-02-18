@@ -3,10 +3,13 @@ ext {
     app_compat_version = '1.1.0-alpha02'
     core_version = '1.1.0-alpha04'
     constraint_layout_version = '2.0.0-alpha3'
-    material_design_version = '1.0.0-rc01'
+    material_design_version = '1.1.0-alpha03'
 
     // Koin
     koin_core_version = '1.0.2'
+
+    // Leak Canary
+    leak_canary_version = '1.6.3'
 
     // Unit Testing
     junit_version = '4.12'
