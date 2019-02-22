@@ -33,7 +33,7 @@
                 app:layout_constraintTop_toBottomOf="@id/main_app_bar_layout"
                 android:layout_width="match_parent"
                 app:layout_constraintBottom_toTopOf="@id/main_bottom_navigation_view"
-                android:layout_height="match_parent"/>
+                android:layout_height="0dp"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/main_bottom_navigation_view"
