@@ -54,7 +54,7 @@ class MainActivity : BaseActivity() {
     private fun openFragment(fragment: Fragment, title: String) {
         binding.mainToolbar.title = title
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, fragment)
+        transaction.replace(R.id.main_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
