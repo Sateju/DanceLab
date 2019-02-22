@@ -13,13 +13,6 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity() {
 
-    companion object {
-        private const val TITLE = "Eventos"
-    }
-
-    // Lazy Inject ViewModel
-    private val eventsViewModel: EventsViewModel by viewModel()
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

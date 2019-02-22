@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import jjtelechea.dancelab.R
 import jjtelechea.dancelab.databinding.FragmentEventsBinding
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class EventsFragment : Fragment() {
 
@@ -15,6 +16,9 @@ class EventsFragment : Fragment() {
         const val FRAGMENT_TITLE = "Eventos"
         fun newInstance() = EventsFragment()
     }
+
+    // Lazy Inject ViewModel
+    private val eventsViewModel: EventsViewModel by viewModel()
 
     private lateinit var binding: FragmentEventsBinding
 
