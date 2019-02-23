@@ -52,6 +52,7 @@ class MainActivity : BaseActivity() {
     private fun openFragment(fragment: Fragment, idTitle: Int) {
         binding.mainToolbar.title = getString(idTitle)
         val transaction = supportFragmentManager.beginTransaction()
+        transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
         transaction.replace(R.id.main_container, fragment)
         transaction.commit()
     }
