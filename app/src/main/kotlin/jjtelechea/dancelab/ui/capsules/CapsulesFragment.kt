@@ -12,7 +12,6 @@ import jjtelechea.dancelab.databinding.FragmentCapsulesBinding
 class CapsulesFragment : Fragment() {
 
     companion object {
-        const val FRAGMENT_TITLE = "Cápsulas"
         fun newInstance() = CapsulesFragment()
     }
 

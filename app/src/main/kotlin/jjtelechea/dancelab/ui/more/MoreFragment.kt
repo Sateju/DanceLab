@@ -12,7 +12,6 @@ import jjtelechea.dancelab.databinding.FragmentMoreBinding
 class MoreFragment : Fragment() {
 
     companion object {
-        const val FRAGMENT_TITLE = "Más"
         fun newInstance() = MoreFragment()
     }
 

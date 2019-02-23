@@ -12,7 +12,6 @@ import jjtelechea.dancelab.databinding.FragmentScheduleBinding
 class ScheduleFragment : Fragment() {
 
     companion object {
-        const val FRAGMENT_TITLE = "Horarios"
         fun newInstance() = ScheduleFragment()
     }
 

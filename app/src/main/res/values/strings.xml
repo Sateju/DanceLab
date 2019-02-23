@@ -6,4 +6,16 @@
     <string name="bottom_navigation_bar_schedule">Horarios</string>
     <string name="bottom_navigation_bar_capsules">Cápsulas</string>
     <string name="bottom_navigation_bar_more">Más</string>
+
+    <!-- Events Fragment -->
+    <string name="fragment_events_title">Eventos</string>
+
+    <!-- Schedule Fragment -->
+    <string name="fragment_schedule_title">Horarios</string>
+
+    <!-- Capsules Fragment -->
+    <string name="fragment_capsules_title">Cápsulas</string>
+
+    <!-- More Fragment -->
+    <string name="fragment_more_title">Más</string>
 </resources>

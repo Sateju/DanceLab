@@ -13,7 +13,6 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class EventsFragment : Fragment() {
 
     companion object {
-        const val FRAGMENT_TITLE = "Eventos"
         fun newInstance() = EventsFragment()
     }
 

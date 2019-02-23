@@ -21,26 +21,26 @@ class MainActivity : BaseActivity() {
         setTheme(R.style.AppTheme)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setClickListenerToBottomNavigation()
-        openFragment(EventsFragment.newInstance(), EventsFragment.FRAGMENT_TITLE)
+        openFragment(EventsFragment.newInstance(), R.string.fragment_events_title)
     }
 
     private fun setClickListenerToBottomNavigation() {
         val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.main_bottom_navigation_events -> {
-                    openFragment(EventsFragment.newInstance(), EventsFragment.FRAGMENT_TITLE)
+                    openFragment(EventsFragment.newInstance(), R.string.fragment_events_title)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.main_bottom_navigation_schedule -> {
-                    openFragment(ScheduleFragment.newInstance(), ScheduleFragment.FRAGMENT_TITLE)
+                    openFragment(ScheduleFragment.newInstance(), R.string.fragment_schedule_title)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.main_bottom_navigation_capsules -> {
-                    openFragment(CapsulesFragment.newInstance(), CapsulesFragment.FRAGMENT_TITLE)
+                    openFragment(CapsulesFragment.newInstance(), R.string.fragment_capsules_title)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.main_bottom_navigation_more -> {
-                    openFragment(MoreFragment.newInstance(), MoreFragment.FRAGMENT_TITLE)
+                    openFragment(MoreFragment.newInstance(), R.string.fragment_more_title)
                     return@OnNavigationItemSelectedListener true
                 }
             }
@@ -49,8 +49,8 @@ class MainActivity : BaseActivity() {
         binding.mainBottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
     }
 
-    private fun openFragment(fragment: Fragment, title: String) {
-        binding.mainToolbar.title = title
+    private fun openFragment(fragment: Fragment, idTitle: Int) {
+        binding.mainToolbar.title = getString(idTitle)
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.main_container, fragment)
         transaction.commit()
