@@ -8,6 +8,6 @@ class EventsViewModel(private val eventsUseCase: EventsUseCase) : ViewModel() {
     fun getEventTitleViewModel(): String {
         val eventEntity = eventsUseCase.execute()
 
-        return "title: ${eventEntity.title} subtitle: ${eventEntity.urlImage} from: ${this}"
+        return "title: ${eventEntity.title} subtitle: ${eventEntity.imageUrl} from: ${this}"
     }
 }

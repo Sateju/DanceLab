@@ -7,5 +7,5 @@ import org.koin.dsl.module.module
 
 val useCaseModule = module {
 
-    single { EventsUseCaseImpl(eventsRepository = get()) as EventsUseCase }
+    single { EventsUseCaseImpl(eventRepository = get()) as EventsUseCase }
 }
