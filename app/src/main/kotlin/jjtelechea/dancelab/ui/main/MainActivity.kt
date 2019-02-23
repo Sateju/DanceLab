@@ -7,9 +7,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import jjtelechea.dancelab.R
 import jjtelechea.dancelab.core.base.BaseActivity
 import jjtelechea.dancelab.databinding.ActivityMainBinding
+import jjtelechea.dancelab.ui.capsules.CapsulesFragment
 import jjtelechea.dancelab.ui.events.EventsFragment
-import jjtelechea.dancelab.ui.events.EventsViewModel
-import org.koin.android.viewmodel.ext.android.viewModel
+import jjtelechea.dancelab.ui.more.MoreFragment
+import jjtelechea.dancelab.ui.schedule.ScheduleFragment
 
 class MainActivity : BaseActivity() {
 
@@ -20,6 +21,7 @@ class MainActivity : BaseActivity() {
         setTheme(R.style.AppTheme)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setClickListenerToBottomNavigation()
+        openFragment(EventsFragment.newInstance(), EventsFragment.FRAGMENT_TITLE)
     }
 
     private fun setClickListenerToBottomNavigation() {
@@ -29,13 +31,16 @@ class MainActivity : BaseActivity() {
                     openFragment(EventsFragment.newInstance(), EventsFragment.FRAGMENT_TITLE)
                     return@OnNavigationItemSelectedListener true
                 }
-                R.id.main_bottom_navigation_calendar -> {
+                R.id.main_bottom_navigation_schedule -> {
+                    openFragment(ScheduleFragment.newInstance(), ScheduleFragment.FRAGMENT_TITLE)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.main_bottom_navigation_capsules -> {
+                    openFragment(CapsulesFragment.newInstance(), CapsulesFragment.FRAGMENT_TITLE)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.main_bottom_navigation_more -> {
+                    openFragment(MoreFragment.newInstance(), MoreFragment.FRAGMENT_TITLE)
                     return@OnNavigationItemSelectedListener true
                 }
             }
@@ -48,7 +53,6 @@ class MainActivity : BaseActivity() {
         binding.mainToolbar.title = title
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.main_container, fragment)
-        transaction.addToBackStack(null)
         transaction.commit()
     }
 }

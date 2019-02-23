@@ -7,7 +7,7 @@
             android:title="@string/bottom_navigation_bar_events"/>
 
     <item
-            android:id="@+id/main_bottom_navigation_calendar"
+            android:id="@+id/main_bottom_navigation_schedule"
             android:icon="@drawable/ic_calendar_black"
             android:title="@string/bottom_navigation_bar_schedule"/>
 
