@@ -3,7 +3,7 @@ package jjtelechea.dancelab.data.mappers
 import jjtelechea.dancelab.data.entities.EventModel
 import jjtelechea.dancelab.domain.entities.EventEntity
 
-class EventMapper {
+class EventModelMapper {
 
     companion object {
 
