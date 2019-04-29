@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import jjtelechea.dancelab.R
 import jjtelechea.dancelab.databinding.FragmentEventsBinding
 import jjtelechea.dancelab.ui.events.adapter.EventsAdapter
@@ -33,6 +35,8 @@ class EventsFragment : Fragment() {
                     EventMapper.transform(eventsViewModel.getEvents())
                 )
             )
+        binding.eventsFragmentRecyclerView.layoutManager =
+            LinearLayoutManager(inflater.context, RecyclerView.VERTICAL, false)
         return binding.root
     }
 }

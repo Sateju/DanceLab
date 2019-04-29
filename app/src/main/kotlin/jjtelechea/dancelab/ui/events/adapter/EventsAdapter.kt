@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import jjtelechea.dancelab.core.di.modules.GlideApp
 import jjtelechea.dancelab.databinding.LayoutEventCardBinding
 import jjtelechea.dancelab.ui.events.model.Event
 
@@ -23,9 +24,8 @@ class EventsAdapter(val events: Array<Event>) : RecyclerView.Adapter<EventsAdapt
 
     inner class ViewHolder(val binding: LayoutEventCardBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Event) {
-            binding.eventCardTitle.text = item.title
-            binding.eventCardBody.text = item.url
-            Glide.with(itemView.context).load(item.image).into(binding.eventCardImage)
+            binding.item = item
+            GlideApp.with(binding.root.context).load(item.image).into(binding.eventCardImage)
             binding.executePendingBindings()
         }
     }
