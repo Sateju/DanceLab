@@ -2,6 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable name="item" type="jjtelechea.dancelab.domain.entities.EventEntity"/>
+    </data>
+
     <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,13 +33,15 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/event_card_image"
                     tools:text="@tools:sample/lorem"
+                    android:text="@{item.title}"
                     android:textStyle="bold"
                     android:paddingStart="@dimen/card_horizontal_margin"
                     android:paddingEnd="@dimen/card_horizontal_margin"
                     android:textSize="@dimen/card_title_text_size"/>
 
             <TextView
-                    android:id="@+id/event_card_body" android:layout_width="match_parent"
+                    android:id="@+id/event_card_body"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="@dimen/card_horizontal_margin"
                     android:paddingEnd="@dimen/card_horizontal_margin"
@@ -44,6 +50,7 @@
                     app:layout_constraintTop_toBottomOf="@id/event_card_title"
                     app:layout_constraintBottom_toBottomOf="parent"
                     tools:text="@tools:sample/lorem"
+                    android:text="@{item.url}"
                     android:textSize="@dimen/card_body_text_size"
                     android:paddingBottom="@dimen/card_vertical_margin"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
