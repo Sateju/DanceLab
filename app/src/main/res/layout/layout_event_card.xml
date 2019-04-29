@@ -3,7 +3,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable name="item" type="jjtelechea.dancelab.domain.entities.EventEntity"/>
+        <variable name="item" type="jjtelechea.dancelab.ui.events.model.Event"/>
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -33,8 +33,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/event_card_image"
                     tools:text="@tools:sample/lorem"
-                    android:text="@{item.title}"
                     android:textStyle="bold"
+                    android:text="@{item.title}"
                     android:paddingStart="@dimen/card_horizontal_margin"
                     android:paddingEnd="@dimen/card_horizontal_margin"
                     android:textSize="@dimen/card_title_text_size"/>
@@ -50,8 +50,8 @@
                     app:layout_constraintTop_toBottomOf="@id/event_card_title"
                     app:layout_constraintBottom_toBottomOf="parent"
                     tools:text="@tools:sample/lorem"
-                    android:text="@{item.url}"
                     android:textSize="@dimen/card_body_text_size"
+                    android:text="@{item.url}"
                     android:paddingBottom="@dimen/card_vertical_margin"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
