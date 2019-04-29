@@ -11,6 +11,9 @@ ext {
     // Leak Canary
     leak_canary_version = '1.6.3'
 
+    // Glide
+    glide_version = '4.7.1'
+
     // Unit Testing
     junit_version = '4.12'
 
